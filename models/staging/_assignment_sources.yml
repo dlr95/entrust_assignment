@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    database: entrust-assignment
+    schema: entrust_assignment_dataset
+    tables:
+      - name: document_report
+      - name: clients
+      - name: human_agent
