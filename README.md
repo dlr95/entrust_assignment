@@ -1,4 +1,5 @@
-### dbt lineage
+### dbt lineage - click to zoom in
+![dbt lineage](./entrust_lineage.png)
 
 ### Sources
 The three CSVs were uploaded to BigQuery
