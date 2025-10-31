@@ -19,6 +19,7 @@ select
     -- Agencies (distinct list + counts)
     array_agg(distinct agency ignore nulls)      as agencies,
     count(distinct agency)                       as n_agencies,
+    count(distinct agency) > 1                   as is_multi_agency,
 
     -- Seniority (distribution + counts)
     array_agg(distinct agent_seniority ignore nulls)                        as seniorities,
