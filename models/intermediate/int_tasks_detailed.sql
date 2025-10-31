@@ -5,7 +5,7 @@ select
     t.report_id,
     t.task_id,
     t.task_type,
-    t.task_tat_secs,
+    t.task_tat_secs / 60 as task_turn_around_time_minutes,
     t.agent_seniority,
     t.agency_manual_processing_operation,
     c.industry,

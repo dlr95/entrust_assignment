@@ -20,7 +20,8 @@ select
     r.report_tat_secs,
     -- Derived KPIs
     case when lower(r.fraud_result) = 'clear' then 1 else 0 end as is_clear,
-    case when lower(r.fraud_result) = 'suspected' then 1 else 0 end as is_suspected
+    case when lower(r.fraud_result) = 'suspected' then 1 else 0 end as is_suspected,
+    case when lower(r.fraud_result) = 'cannot be processed' then 1 else 0 end as is_unprocessed
     from reports r
         left join clients c 
             using (client_id)
