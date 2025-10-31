@@ -8,8 +8,12 @@ select
     t.n_fraud_assessment,
     t.avg_task_turnaround_time_secs,
     t.total_task_turnaround_time_secs,
-    t.agent_seniority,
-    t.avg_agency_ops
+    t.agencies,
+    t.n_agencies,
+    t.seniorities,
+    t.n_seniorities,
+    t.n_tasks_senior,
+    t.n_tasks_junior
     from {{ ref('int_document_report') }} dr
         left join {{ ref('int_tasks_by_report') }} t
             using (report_id)

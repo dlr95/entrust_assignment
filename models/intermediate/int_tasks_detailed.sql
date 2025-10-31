@@ -7,7 +7,7 @@ select
     t.task_type,
     t.task_turnaround_time_secs,
     t.agent_seniority,
-    t.agency_manual_processing_operation,
+    t.agency,
     c.industry,
     c.client_country
     from {{ ref('stg_human_agent') }} t

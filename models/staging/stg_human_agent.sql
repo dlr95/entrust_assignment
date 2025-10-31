@@ -6,5 +6,5 @@ select
     trim(task_type)                                     as task_type,     -- Classification / Extraction / Fraud Assessment
     safe_cast(task_turn_around_time_secs as int64)      as task_turnaround_time_secs,
     trim(`Agent Seniority`)                             as agent_seniority,
-    cast(agency_manual_processing_operation as int64)   as agency_manual_processing_operation
+    cast(agency_manual_processing_operation as int64)   as agency
     from {{ source('raw', 'human_agent') }}
