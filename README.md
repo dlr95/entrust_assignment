@@ -1,15 +1,18 @@
-Welcome to your new dbt project!
+### dbt lineage
 
-### Using the starter project
+### Sources
+The three CSVs were uploaded to BigQuery
 
-Try running the following commands:
-- dbt run
-- dbt test
+### Staging
+Cleaning and casting each of the three CSVs.
 
+### Intermediate
+Documents are joined to client info and an aggregation of tasks (sum of tasks per type, sum of tasks per agent seniority, etc.) is grouped per report ID. This results in int_document_reports_with_tasks
+We also have an intermediate model at the task level. int_tasks_detailed
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+### Reporting
+The rpt models that are selected in the Looker Studio dashboard.
+
+### Dashboard
+[Looker Studio dashboard](https://lookerstudio.google.com/reporting/7bd1a6d2-6007-458f-92ea-2c0912c47a57)
+Contains some additional calculated fields, such as calculating turnaround times in minutes and seconds.
