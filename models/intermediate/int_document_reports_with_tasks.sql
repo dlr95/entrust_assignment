@@ -10,6 +10,7 @@ select
     t.total_task_turnaround_time_secs,
     t.agencies,
     t.n_agencies,
+    t.is_multi_agency,
     t.seniorities,
     t.n_seniorities,
     t.n_tasks_senior,
