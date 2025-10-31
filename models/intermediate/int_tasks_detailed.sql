@@ -5,7 +5,7 @@ select
     t.report_id,
     t.task_id,
     t.task_type,
-    t.task_tat_secs,
+    t.task_turnaround_time_secs,
     t.agent_seniority,
     t.agency_manual_processing_operation,
     c.industry,

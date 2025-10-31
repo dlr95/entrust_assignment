@@ -11,5 +11,5 @@ select
   trim(`Document Type`)                             as document_type,
   trim(`Issuing country`)                           as issuing_country,
   cast(`Report Completed Date` as date)             as report_completed_date,
-  safe_cast(report_turn_around_time_secs as int64)  as report_tat_secs
+  safe_cast(report_turn_around_time_secs as int64)  as report_turnaround_time_secs
   from src

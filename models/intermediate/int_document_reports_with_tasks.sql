@@ -6,8 +6,8 @@ select
     t.n_classification,
     t.n_extraction,
     t.n_fraud_assessment,
-    t.avg_task_tat_secs,
-    t.total_task_tat_secs,
+    t.avg_task_turnaround_time_secs,
+    t.total_task_turnaround_time_secs,
     t.agent_seniority,
     t.avg_agency_ops
     from {{ ref('int_document_report') }} dr

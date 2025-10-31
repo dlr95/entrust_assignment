@@ -10,8 +10,8 @@ select
     countif(task_type = 'Classification') as n_classification,
     countif(task_type = 'Extraction') as n_extraction,
     countif(task_type = 'Fraud Assessment') as n_fraud_assessment,
-    avg(task_tat_secs) as avg_task_tat_secs,
-    sum(task_tat_secs) as total_task_tat_secs,
+    avg(task_turnaround_time_secs) as avg_task_turnaround_time_secs,
+    sum(task_turnaround_time_secs) as total_task_turnaround_time_secs,
     avg(agency_manual_processing_operation) as avg_agency_ops,
     any_value(agent_seniority) as agent_seniority
     from tasks

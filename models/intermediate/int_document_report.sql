@@ -17,7 +17,7 @@ select
     r.issuing_country,
     r.fraud_result,
     r.report_completed_date,
-    r.report_tat_secs,
+    r.report_turnaround_time_secs,
     -- Derived KPIs
     case when lower(r.fraud_result) = 'clear' then 1 else 0 end as is_clear,
     case when lower(r.fraud_result) = 'suspected' then 1 else 0 end as is_suspected,
